@@ -11,7 +11,7 @@
 
 A API possui um único endpoint: ```/quotes/:tag```, onde o parâmetro é uma tag referente ao site [Quotes to Scrape](http://quotes.toscrape.com) no qual o webcrawler busca as frases de acordo com a tag passada como parâmetro. É necessário prover o token de autenticação para poder acessar e requisitar os dados.
 
-O token se encontra em application_controller.rb e por meio de um aplicativo como Postman ou Insomnia em Authorization > API Key se realiza a autenticação com a chave ```Authorization```, sendo o valor o próprio token.
+O token se encontra em ```application_controller.rb``` e por meio de um aplicativo como Postman ou Insomnia em Authorization > API Key se realiza a autenticação com a chave ```Authorization```, sendo o valor o próprio token.
 
 O banco de dados (MongoDB, usando a gem Mongoid) armazena os seguintes campos:
 
