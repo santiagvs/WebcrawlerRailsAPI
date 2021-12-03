@@ -21,7 +21,7 @@ O banco de dados (MongoDB, usando a gem Mongoid) armazena os seguintes campos:
 
 sendo armazenados quando se faz a requisição. **Os dados da pesquisa/query são persistidos por 2 minutos no banco de dados, simulando um cache.**
 
-### Chamada padrão
+### Chamada "sample"
 
 ```
     http://localhost:PORT/quotes/life
