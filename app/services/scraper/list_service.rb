@@ -19,13 +19,12 @@ module Scraper
 
       all_quotes = doc.css('div.quote')
       all_quotes.each do |quo|
-      quotes.push({ 
-      quote: quo.css('span.text').text.tr('“”', ''),
-      author: quo.css('small.author').text,
-      author_about: "http://quotes.toscrape.com" + quo.css('a')[0].attributes['href'].value,
-      tags: quo.css('div.tags').css('a.tag').map { |t| t.text }
-      }) unless quo.css('div.tags').css('a.tag').map { |t| t.text }.all? { |t| t != @tag }
-      
+        quotes.push({ 
+          quote: quo.css('span.text').text.tr('“”', ''),
+          author: quo.css('small.author').text,
+          author_about: "http://quotes.toscrape.com" + quo.css('a')[0].attributes['href'].value,
+          tags: quo.css('div.tags').css('a.tag').map { |t| t.text }
+        }) unless quo.css('div.tags').css('a.tag').map { |t| t.text }.all? { |t| t != @tag }
       end
 
       persist(quotes)
